@@ -22,14 +22,18 @@
       <scope>test</scope>
     </dependency>
     
-      
-        <dependency>
-            <groupId>joda-time</groupId>
+    <dependency>
+      <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.9.9</version>
-        </dependency>
+    </dependency>
     
-    
+    <dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.11</version>
+  <scope>test</scope>
+</dependency>
   </dependencies>
   
 </project>
