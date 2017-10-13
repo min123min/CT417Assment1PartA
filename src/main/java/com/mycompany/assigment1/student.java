@@ -1,54 +1,65 @@
 package com.mycompany.assigment1;
 
 public class student {
-	   private String  First;     
-	    private String Last;      
-	    private String Address;
-	    private int Age;
-	    private String DOB; 
-	    private int ID;
-
-	    // construct a new student with given fields
-	    public student(String first, String last, String Address, String DOB, int age, int ID) {
-	        this.First   = first;
-	        this.Last    = last;
-	        this.Address   = Address;
-	        this.DOB = DOB;
-	        this.Age = age;
-	        this.ID = ID;
-	    }
-	    
-	    public String getFirst(){
-	        return First;
-	    }
-	    
-	    public String getLast(){
-	        return Last;
-	    }
-	    
-	    public int getID(){
-	        return ID;
-	    }
-	    
-	    public String getUsername(){
-	        return  First + Last+ Age;
-	    }
-	    
-	    public String getAddress(){
-	        return Address;
-	    }
-	    
-	    public int getAage(){
-	        return Age;
-	    }
-	    
-	    public String getDOB(){
-	        return DOB;
-	    }
-	    // return a string representation of the invoking object
-	    public String getString() {
-	        return ID + " " + First + " " + Last + " " + Age ;
-	    }
+	private String name;
+	private int age;
+	private String address;
+	private String dob;
+	private String id;
+	private String username;
 	
-	    
+	public student(String n, int a, String add, String birth, String id){
+		
+		this.setName(n);
+		this.setAge(a);
+		this.setAddress(add);
+		this.setDob(birth);
+		this.setId(id);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getUsername(){
+		this.username = this.name + this.age;
+		return this.username;
+	}
+
 }

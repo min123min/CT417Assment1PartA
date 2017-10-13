@@ -2,49 +2,54 @@ package com.mycompany.assigment1;
 
 import org.joda.time.DateTime;
 import java.util.ArrayList;
+import java.util.List;
 public class course {
-    private String  CourseName;     
-    DateTime startDate = new DateTime();
-    DateTime endDate = new DateTime();
-    private ArrayList<module> modules;
+	public class Course {
+		
+		private String name;
+		private List<module> modules;
+		private DateTime startDate;
+		private DateTime endDate;
+		
+		public Course(String n, List<module> subjects, DateTime start, DateTime end){
+			
+			this.setName(n);
+			this.setModules(subjects);
+			this.setStartDate(start);
+			this.setEndDate(end);	
+		}
 
-     
+		public String getName() {
+			return name;
+		}
 
-    public course(String Name, DateTime startDate, DateTime endDate ){
-        this.CourseName   = Name;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        modules = new ArrayList<module>();
-    }
-    
-    public ArrayList<module> getModules() {
-    return modules;
-    }
-    
-    public String getCourseName() {
-        return CourseName;
-    }
-    
-    public DateTime getStartDate() {
-        return startDate;
-    }
-    
-    public DateTime getEndDate() {
-        return endDate;
-    }
-    
-    public void setCourseName(String Name) {
-        this.CourseName = Name;
-    }
-    
-    public void setStartDate(DateTime startDate) {
-        this.startDate = startDate;
-    }
-    
-    public void getEndDate(DateTime endDate) {
-        this.endDate = endDate;
-    }
-    public void addModules(module module){
-        modules.add(module);
-    }
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public List<module> getModules() {
+			return modules;
+		}
+
+		public void setModules(List<module> modules) {
+			this.modules = modules;
+		}
+
+		public DateTime getStartDate() {
+			return startDate;
+		}
+
+		public void setStartDate(DateTime startDate) {
+			this.startDate = startDate;
+		}
+
+		public DateTime getEndDate() {
+			return endDate;
+		}
+
+		public void setEndDate(DateTime endDate) {
+			this.endDate = endDate;
+		}
+
+	}
 }

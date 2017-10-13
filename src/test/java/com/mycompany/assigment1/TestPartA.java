@@ -15,24 +15,13 @@ public class TestPartA {
 	        
 	    }
 	    
-	    @Before
-	    public void setUp() {
-	          student = new student("conor", "healy","Ballygar", "30-04-1996", 21, 14322261);
-	    }
-	    
 	    @Test
-	    public void testUsername(){
-	       String name = student.getUsername();
-	       String expectedResult = "conorhealy21";
-	       System.out.println(name);
-	       assertTrue(expectedResult.equals(name));
-	       
-	    }
-	
-
-		@After
-	    public void tearDown() {
-	    }
+		public void testGetUsername(){
+			
+			student testStudent = new student("oisin", 22, "Galway", "09/02/1995", "14378786");
+			String expected = "oisin22";
+			assertEquals(expected, testStudent.getUsername());
+		}
 
 	    // TODO add test methods here.
 	    // The methods must be annotated with annotation @Test. For example:
