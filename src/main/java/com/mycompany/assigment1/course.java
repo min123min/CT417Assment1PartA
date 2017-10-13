@@ -4,14 +4,14 @@ import org.joda.time.DateTime;
 import java.util.ArrayList;
 import java.util.List;
 public class course {
-	public class Course {
+	
 		
 		private String name;
 		private List<module> modules;
 		private DateTime startDate;
 		private DateTime endDate;
 		
-		public Course(String n, List<module> subjects, DateTime start, DateTime end){
+		public course(String n, List<module> subjects, DateTime start, DateTime end){
 			
 			this.setName(n);
 			this.setModules(subjects);
@@ -52,4 +52,3 @@ public class course {
 		}
 
 	}
-}
